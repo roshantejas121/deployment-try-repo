@@ -14,6 +14,10 @@ function getDb() {
   return prisma;
 }
 
+app.get("/", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 app.get("/health", (req, res) => {
   res.status(200).json({ status: "ok" });
 });
